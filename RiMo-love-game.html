@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Messages Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #ffccdc;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 50px;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #ff4081;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #e91e63;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>💖 ♾️♾️♾️♾️Love Messages Game from Your one and only pikin✨💕♾️♾️♾️ 💖</h1>
+    <div class="container">
+        <p>Enter a number (1-20) to see your special message:</p>
+        <input type="number" id="numberInput" min="1" max="20">
+        <br>
+        <button onclick="showLoveMessage()">Get Message</button>
+        <p class="message" id="message"></p>
+    </div>
+
+    <script>
+        // Array of 20 love messages
+        const loveMessages = [
+            "my mshawrizzzz...You make my world brighter every day 🌟",
+            "Thinking of you makes me smile like your pikin😊",
+            "I love you more than words can express..achamiiiiiiiiin 💕",
+            "You're my sunshine on a rainy day ☀️",
+            "Every moment with you is special 💖",
+            "You're the best thing that ever happened to me ...na nasema walaaaaaaaaai😍",
+            "My love for you grows stronger every day 🌹",
+            "You are my dream come true 🌈",
+            "I feel lucky to have you in my life...actually, you are my life 🍀",
+            "You complete me in every way❤️",
+            "You have the most beautiful soul. 💫",
+            "Your laughter is my favorite sound. 🎶",
+            "I cherish every second we spend together, #epitome times,,and more😍😍👌 ⏳",
+            "You're my inspiration every day 💡",
+            "You're more precious than gold and silver to me. 💎",
+            "tinkerbell,,You are my happy place. 🏡",
+            "I love you to the moon and back, and to pluto and the next galaxyyy,,, 🌙",
+            "You're the reason I believe in true love. 💍",
+            "With you, every moment is magical. ✨",
+            "No one else makes me feel the way you do. 💓"
+        ];
+
+        function showLoveMessage() {
+            const input = document.getElementById('numberInput').value;
+            const messageBox = document.getElementById('message');
+
+            if (input >= 1 && input <= 20) {
+                messageBox.textContent = loveMessages[input - 1];
+            } else {
+                messageBox.textContent = "Please enter a number between 1 and 20.";
+            }
+        }
+    </script>
+</body>
+</html>
